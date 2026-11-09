@@ -98,6 +98,12 @@ main
 .item{transition:box-shadow .15s}
 .item:hover{box-shadow:0 2px 10px rgba(0,0,0,.12)}
 button:hover{filter:brightness(1.1)}
+ 13-final-styles
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:16px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.item.done h3{text-decoration:line-through}
+@media (max-width:560px){.toolbar select{width:100%}}
+
 12-features-logic
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:16px}
 
@@ -109,6 +115,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:16px}
 @media (max-width:560px){form{grid-template-columns:1fr}}
 
 h2{margin:0 0 12px;font-size:1.15rem}
+ main
  main
  main
  main
