@@ -56,6 +56,7 @@ main
       <div><label for="name">Item name</label><input id="name" required maxlength="60" placeholder="e.g. Blue water bottle"></div>
       <div><label for="place">Location</label><input id="place" required maxlength="60" placeholder="e.g. Library, 2nd floor"></div>
       <div><label for="date">Date</label><input id="date" type="date" required></div>
+      <div class="full"><label for="category">Category</label><select id="category"><option>Electronics</option><option>Books</option><option>ID Cards</option><option>Clothing</option><option>Bags</option><option>Other</option></select></div>
       <div class="full"><label for="desc">Description</label><textarea id="desc" maxlength="200" placeholder="Colour, brand, any marks…"></textarea></div>
       <div class="full"><label for="contact">Your contact (phone or email)</label><input id="contact" required maxlength="60"></div>
       <div class="full"><button type="submit">Post item</button></div>
@@ -64,16 +65,19 @@ main
 
   <section>
     <h2>Items</h2>
+        <p id="stats" class="stats"></p>
     <div class="toolbar">
       <input id="search" type="search" placeholder="Search items or locations…">
       <button class="ghost active" data-f="all">All</button>
       <button class="ghost" data-f="lost">Lost</button>
       <button class="ghost" data-f="found">Found</button>
+      <select id="sort"><option value="new">Newest first</option><option value="old">Oldest first</option></select>
     </div>
     <div id="list"></div>
  9-Polish-styles
   </section>
 </main>
+<footer>Campus Lost &amp; Found · B.Tech team project</footer>
 <script src="script.js"></script>
 
  6-dark-mode
