@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Campus Lost &amp; Found</title>
+</head>
+<body>
+<header>
+  <h1>🎒 Campus Lost &amp; Found</h1>
+  <link rel="stylesheet" href="style.css">
+  <p>Lost something? Found something? Post it here.</p>
+</header>
+<main>
+  <section>
+    <h2>Report an item</h2>
+    <form id="form">
+      <div><label for="type">Type</label>
+        <select id="type"><option value="lost">I lost something</option><option value="found">I found something</option></select></div>
+      <div><label for="name">Item name</label><input id="name" required maxlength="60" placeholder="e.g. Blue water bottle"></div>
+      <div><label for="place">Location</label><input id="place" required maxlength="60" placeholder="e.g. Library, 2nd floor"></div>
+      <div><label for="date">Date</label><input id="date" type="date" required></div>
+      <div class="full"><label for="desc">Description</label><textarea id="desc" maxlength="200" placeholder="Colour, brand, any marks…"></textarea></div>
+      <div class="full"><label for="contact">Your contact (phone or email)</label><input id="contact" required maxlength="60"></div>
+      <div class="full"><button type="submit">Post item</button></div>
+    </form>
+  </section>
+
+  <section>
+    <h2>Items</h2>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search items or locations…">
+      <button class="ghost active" data-f="all">All</button>
+      <button class="ghost" data-f="lost">Lost</button>
+      <button class="ghost" data-f="found">Found</button>
+    </div>
+    <div id="list"></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
