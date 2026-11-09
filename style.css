@@ -14,6 +14,7 @@ header h1{margin:0;font-size:1.6rem}
 header p{margin:6px 0 0;opacity:.9}
 main{max-width:820px;margin:0 auto;padding:16px}
 section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+4-form-styling
 h2{margin:0 0 12px;font-size:1.15rem}
 form{display:grid;gap:10px;grid-template-columns:1fr 1fr}
 .full{grid-column:1/-1}
@@ -31,3 +32,6 @@ button{cursor:pointer;font:inherit;border:0;border-radius:8px;padding:9px 16px;b
 .actions{display:flex;gap:8px;margin-top:8px}
 .empty{text-align:center;color:var(--muted);padding:20px}
 @media (max-width:560px){form{grid-template-columns:1fr}}
+
+h2{margin:0 0 12px;font-size:1.15rem}
+ main
