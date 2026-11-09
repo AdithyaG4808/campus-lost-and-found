@@ -1,3 +1,4 @@
+11-save-resolve-delete
 var KEY = "campus_lost_found_v1";
 var items = [];
 var filter = "all";
@@ -16,6 +17,11 @@ function load(){
 function save(){
   try{ localStorage.setItem(KEY, JSON.stringify(items)); }catch(e){}
 }
+
+var items = [];
+var filter = "all";
+
+ main
 function esc(s){
   return String(s).replace(/[&<>"']/g, function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
@@ -36,6 +42,7 @@ function render(){
       '<div class="meta">📍 ' + esc(i.place) + ' · 📅 ' + esc(i.date) + '</div>' +
       (i.desc ? '<div>' + esc(i.desc) + '</div>' : '') +
       '<div class="meta">Contact: ' + esc(i.contact) + '</div>' +
+ 11-save-resolve-delete
       '<div class="actions">' +
         '<button class="ghost" onclick="toggleDone(' + i.id + ')">' + (i.done ? 'Reopen' : 'Mark as resolved') + '</button>' +
         '<button class="ghost" onclick="removeItem(' + i.id + ')">Delete</button>' +
@@ -52,6 +59,12 @@ function removeItem(id){
   save(); render();
 }
 
+
+      '</div>';
+  }).join("");
+}
+
+main
 document.getElementById("form").addEventListener("submit", function(e){
   e.preventDefault();
   var v = function(id){ return document.getElementById(id).value.trim(); };
@@ -59,7 +72,11 @@ document.getElementById("form").addEventListener("submit", function(e){
     id: Date.now(), type: v("type"), name: v("name"), place: v("place"),
     date: v("date"), desc: v("desc"), contact: v("contact"), done: false
   });
+ 11-save-resolve-delete
   save(); render();
+
+  render();
+ main
   e.target.reset();
   document.getElementById("date").value = new Date().toISOString().slice(0,10);
 });
@@ -74,4 +91,7 @@ document.querySelectorAll("[data-f]").forEach(function(b){
 });
 
 document.getElementById("date").value = new Date().toISOString().slice(0,10);
+ 11-save-resolve-delete
 load(); render();
+render();
+ main
